@@ -16,6 +16,7 @@ def print_menu():
 
 
 def main():
+    #interfata de tip consola:
     lst = []
     while True:
         print_menu()
@@ -27,11 +28,12 @@ def main():
             break
         else:
             print('Opțiune invalidă, reîncearcă!')
+if __name__ == '__main__':
+  main()
 
-main()
 
 
 def test_decimal_to_binary():
-    assert decimal_to_binary(32)==0b100000
-    assert decimal_to_binary(123)==0b1111011
+    assert decimal_to_binary(32)== 32  in Binary :  0b100000
+    assert decimal_to_binary(123)== 123 in Binary : 0b1111011
 test_decimal_to_binary()
