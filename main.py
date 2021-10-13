@@ -1,4 +1,4 @@
-def e_palindrom(nr):
+def is_palindrome(nr):
     '''
     Determină dacă un număr dat este palindrom.
 
@@ -14,15 +14,15 @@ def e_palindrom(nr):
         return True
     return False
 
-def test_e_palindrom():
-    assert e_palindrom(132)==False
-    assert e_palindrom(5669)==False
-    assert e_palindrom(1221)==True
-    assert e_palindrom(26)==False
-    assert e_palindrom(15)==False
-test_e_palindrom()
+def test_is_palindrome():
+    assert is_palindrome(132)==False
+    assert is_palindrome(5669)==False
+    assert is_palindrome(1221)==True
+    assert is_palindrome(26)==False
+    assert is_palindrome(15)==False
+test_is_palindrome()
 
-def prim(n):
+def is_prime(n):
     '''
     Programul determina daca un numar n este prim sau nu.
     -un numar intreg introdus de utilizator
@@ -64,7 +64,7 @@ def test_get_largest_prime_below():
     assert get_largest_prime_below(10) == 7
 test_get_largest_prime_below()
 
-def decimal_to_binary(dec):
+def get_base_2(dec):
     '''
     Transforma un nr din zecimal in binar.
     :param dec: nr dat in baza 10
@@ -74,10 +74,10 @@ def decimal_to_binary(dec):
     print(decimal, " in Binary : ", bin(decimal))
 
 '''
-def test_decimal_to_binary():
-    assert decimal_to_binary(32)==32  in Binary :  0b100000
-    assert decimal_to_binary(123)==123  in Binary :  0b100000
-test_decimal_to_binary()'''
+def test_get_base_2():
+    assert get_base_2(32)==32  in Binary :  0b100000
+    assert get_base_2(123)==123  in Binary :  0b100000
+test_get_base_2()'''
 
 
 option = '''
@@ -92,7 +92,7 @@ def main():
         optiune = input(option)
         if optiune == '1':
             numar = int(input("Scrieti valoarea:"))
-            if e_palindrom(numar):
+            if is_palindrome(numar):
                 print("Este palindrom")
             else:
                 print("Nu este palindrom")
@@ -102,7 +102,7 @@ def main():
             print(result)
         elif optiune == '3':
             numar = int(input("Scrieti numarul: "))
-            result = decimal_to_binary(numar)
+            result = get_base_2(numar)
             return result
         elif optiune == '4':
             print("programul s-a oprit!")
