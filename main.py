@@ -51,7 +51,7 @@ def get_largest_prime_below(n):
     if n < 2: return "Nu exista"
     rez = n
     while rez >= 0:
-        if prim(rez) == True:
+        if is_prime(rez) == True:
             return rez
         rez = rez - 1
 
